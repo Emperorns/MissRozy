@@ -215,13 +215,13 @@ async def Lazy_start():
                 CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                                 "GΞΓ SHAЯeABLΞ LIИҜ", url=share_link)]]))
-                if message.chat.username:
-                    await forwarded_msg.reply_text(
-                        f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
-                else:
-                    private_ch = str(message.chat.id)[4:]
-                    await forwarded_msg.reply_text(
-                        f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/c/{private_ch}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
+                #if message.chat.username:
+                    #await forwarded_msg.reply_text(
+                       # f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
+               # else:
+              #      private_ch = str(message.chat.id)[4:]
+                #    await forwarded_msg.reply_text(
+                  #      f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/c/{private_ch}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
             except FloodWait as sl:
                 await asyncio.sleep(sl.value)
                 await bot.send_message(
